@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowAnimationStyle">@style/ActivityAnim</item>
+    </style>
+
+    <!--A页面跳转到B页面 再返回  实现进入时左进右出 返回时右进左出的效果-->
+    <style name="ActivityAnim">
+        <!--A页面跳转到B页面时 将要打开的B页面的动画 X from -1 to 0-->
+        <item name="android:activityOpenEnterAnimation">@anim/anim_left_in</item>
+        <!--A页面跳转到B页面时 将要退出的A页面的动画 X from 0 to 1-->
+        <item name="android:activityOpenExitAnimation">@anim/anim_right_out</item>
+        <!--B页面返回到A页面时 将要打开的A页面的动画 X from 1 to 0-->
+        <item name="android:activityCloseEnterAnimation">@anim/anim_right_in</item>
+        <!--B页面返回到A页面时 将要退出的B页面的动画 X from 0 to -1-->
+        <item name="android:activityCloseExitAnimation">@anim/anim_left_out</item>
+    </style>
+
+</resources>
